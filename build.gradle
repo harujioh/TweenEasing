@@ -21,6 +21,12 @@ dependencies {
 
     // JUnit
     testCompile 'junit:junit:4.12'
+
+    // GUI
+    testCompile 'org.eclipse.swt:org.eclipse.swt.cocoa.macosx.x86_64:4.3'
+
+    // uil
+    testCompile 'org.reflections:reflections:0.9.10'
 }
 
 javadoc {
