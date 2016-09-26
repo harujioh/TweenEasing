@@ -14,7 +14,7 @@ public class LinearEasing extends BaseEasing {
 	 * @param valueRange
 	 * @param duration
 	 */
-	public LinearEasing(int startValue, int valueRange, int duration) {
+	public LinearEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 

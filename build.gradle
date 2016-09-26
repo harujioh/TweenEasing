@@ -1,11 +1,13 @@
-
 // Apply the java plugin to add support for Java
 plugins {
     id 'java'
+    id 'maven'
 }
 
+def myAppName = 'PixelPusher'
 def myAppVersion = '0.0.1'
 
+group = 'jp.harujioh'
 version = myAppVersion
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
@@ -26,4 +28,34 @@ dependencies {
 javadoc {
     options.charSet = 'UTF-8'
     options.encoding = 'UTF-8'
+}
+
+jar {
+    from sourceSets.main.allSource
+}
+
+ext {
+    mavenRepository = file('maven')
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file:${projectDir}")
+        }
+    }
+}
+
+[install.repositories.mavenInstaller, uploadArchives.repositories.mavenDeployer]*.pom*.whenConfigured { pom ->
+    pom.project {
+        inceptionYear '2016'
+        packaging 'jar'
+        licenses {
+            license {
+                name 'The Apache Software License, Version 2.0'
+                url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                distribution 'repo'
+            }
+        }
+    }
 }

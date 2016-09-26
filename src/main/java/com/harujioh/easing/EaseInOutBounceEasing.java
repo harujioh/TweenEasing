@@ -24,7 +24,7 @@ public class EaseInOutBounceEasing extends BaseEasing {
 	 * @param valueRange
 	 * @param duration
 	 */
-	public EaseInOutBounceEasing(int startValue, int valueRange, int duration) {
+	public EaseInOutBounceEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 		this.easeIn = new EaseInBounceEasing(0, valueRange, duration);
 		this.easeOut = new EaseOutBounceEasing(0, valueRange, duration);

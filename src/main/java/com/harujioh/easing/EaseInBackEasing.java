@@ -14,7 +14,7 @@ public class EaseInBackEasing extends BaseEasing {
 	 * @param valueRange
 	 * @param duration
 	 */
-	public EaseInBackEasing(int startValue, int valueRange, int duration) {
+	public EaseInBackEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 
@@ -26,7 +26,7 @@ public class EaseInBackEasing extends BaseEasing {
 	 * @param duration
 	 * @param coefficient
 	 */
-	public EaseInBackEasing(int startValue, int valueRange, int duration, double coefficient) {
+	public EaseInBackEasing(double startValue, double valueRange, double duration, double coefficient) {
 		super(startValue, valueRange, duration, coefficient);
 	}
 

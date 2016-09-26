@@ -14,7 +14,7 @@ public class EaseInCircEasing extends BaseEasing {
 	 * @param valueRange
 	 * @param duration
 	 */
-	public EaseInCircEasing(int startValue, int valueRange, int duration) {
+	public EaseInCircEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 

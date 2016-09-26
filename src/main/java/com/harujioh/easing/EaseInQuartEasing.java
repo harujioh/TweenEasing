@@ -14,7 +14,7 @@ public class EaseInQuartEasing extends BaseEasing {
 	 * @param valueRange
 	 * @param duration
 	 */
-	public EaseInQuartEasing(int startValue, int valueRange, int duration) {
+	public EaseInQuartEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 

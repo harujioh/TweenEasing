@@ -14,7 +14,7 @@ public class EaseInOutCubicEasing extends BaseEasing {
 	 * @param valueRange
 	 * @param duration
 	 */
-	public EaseInOutCubicEasing(int startValue, int valueRange, int duration) {
+	public EaseInOutCubicEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 

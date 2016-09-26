@@ -14,7 +14,7 @@ public class EaseOutExpoEasing extends BaseEasing {
 	 * @param valueRange
 	 * @param duration
 	 */
-	public EaseOutExpoEasing(int startValue, int valueRange, int duration) {
+	public EaseOutExpoEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 
