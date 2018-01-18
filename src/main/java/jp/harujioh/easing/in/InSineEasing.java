@@ -1,11 +1,13 @@
-package jp.harujioh.easing;
+package jp.harujioh.easing.in;
+
+import jp.harujioh.easing.BaseEasing;
 
 /**
- * quintic easing out - decelerating to zero velocity
+ * sinusoidal easing in - accelerating from zero velocity
  * 
  * @author harujioh
  */
-public class EaseOutQuintEasing extends BaseEasing {
+public class InSineEasing extends BaseEasing {
 
 	/**
 	 * Constructor
@@ -17,7 +19,7 @@ public class EaseOutQuintEasing extends BaseEasing {
 	 * @param duration
 	 *            変化の総時間
 	 */
-	public EaseOutQuintEasing(double startValue, double valueRange, double duration) {
+	public InSineEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 
@@ -26,6 +28,6 @@ public class EaseOutQuintEasing extends BaseEasing {
 	 */
 	@Override
 	public double easing(double time) {
-		return valueRange * ((time = time / duration - 1) * time * time * time * time + 1) + startValue;
+		return -valueRange * Math.cos(time / duration * (Math.PI / 2)) + valueRange + startValue;
 	}
 }

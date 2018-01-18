@@ -1,11 +1,13 @@
-package jp.harujioh.easing;
+package jp.harujioh.easing.out;
+
+import jp.harujioh.easing.BaseEasing;
 
 /**
- * circular easing out - decelerating to zero velocity
+ * quintic easing out - decelerating to zero velocity
  * 
  * @author harujioh
  */
-public class EaseOutCircEasing extends BaseEasing {
+public class OutQuintEasing extends BaseEasing {
 
 	/**
 	 * Constructor
@@ -17,7 +19,7 @@ public class EaseOutCircEasing extends BaseEasing {
 	 * @param duration
 	 *            変化の総時間
 	 */
-	public EaseOutCircEasing(double startValue, double valueRange, double duration) {
+	public OutQuintEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 
@@ -26,6 +28,6 @@ public class EaseOutCircEasing extends BaseEasing {
 	 */
 	@Override
 	public double easing(double time) {
-		return valueRange * Math.sqrt(1 - (time = time / duration - 1) * time) + startValue;
+		return valueRange * ((time = time / duration - 1) * time * time * time * time + 1) + startValue;
 	}
 }

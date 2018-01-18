@@ -1,11 +1,13 @@
-package jp.harujioh.easing;
+package jp.harujioh.easing.inout;
+
+import jp.harujioh.easing.BaseEasing;
 
 /**
- * back easing out - decelerating to zero velocity
+ * back easing in/out - acceleration until halfway, then deceleration
  * 
  * @author harujioh
  */
-public class EaseOutBackEasing extends BaseEasing {
+public class InOutBackEasing extends BaseEasing {
 
 	/**
 	 * Constructor
@@ -17,7 +19,7 @@ public class EaseOutBackEasing extends BaseEasing {
 	 * @param duration
 	 *            変化の総時間
 	 */
-	public EaseOutBackEasing(double startValue, double valueRange, double duration) {
+	public InOutBackEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 
@@ -33,7 +35,7 @@ public class EaseOutBackEasing extends BaseEasing {
 	 * @param coefficient
 	 *            係数
 	 */
-	public EaseOutBackEasing(double startValue, double valueRange, double duration, double coefficient) {
+	public InOutBackEasing(double startValue, double valueRange, double duration, double coefficient) {
 		super(startValue, valueRange, duration, coefficient);
 	}
 
@@ -43,7 +45,9 @@ public class EaseOutBackEasing extends BaseEasing {
 	@Override
 	public double easing(double time) {
 		double coefficient = this.coefficient.orElse(1.70158);
-		return valueRange * ((time = time / duration - 1) * time * ((coefficient + 1) * time + coefficient) + 1)
+		if ((time /= duration / 2) < 1)
+			return valueRange / 2 * (time * time * (((coefficient *= (1.525)) + 1) * time - coefficient)) + startValue;
+		return valueRange / 2 * ((time -= 2) * time * (((coefficient *= (1.525)) + 1) * time + coefficient) + 2)
 				+ startValue;
 	}
 }

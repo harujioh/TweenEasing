@@ -1,11 +1,13 @@
-package jp.harujioh.easing;
+package jp.harujioh.easing.out;
+
+import jp.harujioh.easing.BaseEasing;
 
 /**
  * bounce easing out - decelerating to zero velocity
  * 
  * @author harujioh
  */
-public class EaseOutBounceEasing extends BaseEasing {
+public class OutBounceEasing extends BaseEasing {
 
 	/**
 	 * Constructor
@@ -17,7 +19,7 @@ public class EaseOutBounceEasing extends BaseEasing {
 	 * @param duration
 	 *            変化の総時間
 	 */
-	public EaseOutBounceEasing(double startValue, double valueRange, double duration) {
+	public OutBounceEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 

@@ -1,11 +1,13 @@
-package jp.harujioh.easing;
+package jp.harujioh.easing.out;
+
+import jp.harujioh.easing.BaseEasing;
 
 /**
  * cubic easing out - decelerating to zero velocity
  * 
  * @author harujioh
  */
-public class EaseOutCubicEasing extends BaseEasing {
+public class OutCubicEasing extends BaseEasing {
 
 	/**
 	 * Constructor
@@ -17,7 +19,7 @@ public class EaseOutCubicEasing extends BaseEasing {
 	 * @param duration
 	 *            変化の総時間
 	 */
-	public EaseOutCubicEasing(double startValue, double valueRange, double duration) {
+	public OutCubicEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 

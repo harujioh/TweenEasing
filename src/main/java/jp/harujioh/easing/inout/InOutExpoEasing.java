@@ -1,11 +1,13 @@
-package jp.harujioh.easing;
+package jp.harujioh.easing.inout;
+
+import jp.harujioh.easing.BaseEasing;
 
 /**
  * exponential easing in/out - accelerating until halfway, then decelerating
  * 
  * @author harujioh
  */
-public class EaseInOutExpoEasing extends BaseEasing {
+public class InOutExpoEasing extends BaseEasing {
 
 	/**
 	 * Constructor
@@ -17,7 +19,7 @@ public class EaseInOutExpoEasing extends BaseEasing {
 	 * @param duration
 	 *            変化の総時間
 	 */
-	public EaseInOutExpoEasing(double startValue, double valueRange, double duration) {
+	public InOutExpoEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 

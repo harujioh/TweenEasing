@@ -1,11 +1,13 @@
-package jp.harujioh.easing;
+package jp.harujioh.easing.in;
+
+import jp.harujioh.easing.BaseEasing;
 
 /**
- * sinusoidal easing in - accelerating from zero velocity
+ * cubic easing in - accelerating from zero velocity
  * 
  * @author harujioh
  */
-public class EaseInSineEasing extends BaseEasing {
+public class InCubicEasing extends BaseEasing {
 
 	/**
 	 * Constructor
@@ -17,7 +19,7 @@ public class EaseInSineEasing extends BaseEasing {
 	 * @param duration
 	 *            変化の総時間
 	 */
-	public EaseInSineEasing(double startValue, double valueRange, double duration) {
+	public InCubicEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 
@@ -26,6 +28,6 @@ public class EaseInSineEasing extends BaseEasing {
 	 */
 	@Override
 	public double easing(double time) {
-		return -valueRange * Math.cos(time / duration * (Math.PI / 2)) + valueRange + startValue;
+		return valueRange * (time /= duration) * time * time + startValue;
 	}
 }

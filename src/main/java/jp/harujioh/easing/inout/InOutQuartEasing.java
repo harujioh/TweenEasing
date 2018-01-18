@@ -1,11 +1,13 @@
-package jp.harujioh.easing;
+package jp.harujioh.easing.inout;
+
+import jp.harujioh.easing.BaseEasing;
 
 /**
  * quartic easing in/out - acceleration until halfway, then deceleration
  * 
  * @author harujioh
  */
-public class EaseInOutQuartEasing extends BaseEasing {
+public class InOutQuartEasing extends BaseEasing {
 
 	/**
 	 * Constructor
@@ -17,7 +19,7 @@ public class EaseInOutQuartEasing extends BaseEasing {
 	 * @param duration
 	 *            変化の総時間
 	 */
-	public EaseInOutQuartEasing(double startValue, double valueRange, double duration) {
+	public InOutQuartEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 

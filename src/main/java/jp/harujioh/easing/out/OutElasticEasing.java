@@ -1,11 +1,13 @@
-package jp.harujioh.easing;
+package jp.harujioh.easing.out;
+
+import jp.harujioh.easing.BaseEasing;
 
 /**
- * elastically easing in - accelerating from zero velocity
+ * elastically easing out - decelerating to zero velocity
  * 
  * @author harujioh
  */
-public class EaseInElasticEasing extends BaseEasing {
+public class OutElasticEasing extends BaseEasing {
 
 	/**
 	 * Constructor
@@ -17,7 +19,7 @@ public class EaseInElasticEasing extends BaseEasing {
 	 * @param duration
 	 *            変化の総時間
 	 */
-	public EaseInElasticEasing(double startValue, double valueRange, double duration) {
+	public OutElasticEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 
@@ -36,6 +38,7 @@ public class EaseInElasticEasing extends BaseEasing {
 			s = p / 4;
 		} else
 			s = p / (2 * Math.PI) * Math.asin(valueRange / a);
-		return -(a * Math.pow(2, 10 * (time -= 1)) * Math.sin((time * duration - s) * (2 * Math.PI) / p)) + startValue;
+		return a * Math.pow(2, -10 * time) * Math.sin((time * duration - s) * (2 * Math.PI) / p) + valueRange
+				+ startValue;
 	}
 }
