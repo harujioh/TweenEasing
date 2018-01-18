@@ -6,7 +6,7 @@
 
 |name|IN|OUT|IN-OUT|
 |---|---|---|---|
-|LINEAR|![LINEAR](./images/0_LINEAR.png)|||
+|LINEAR|||![LINEAR](./images/0_LINEAR.png)|
 |QUAD|![LINEAR](./images/1_IN_QUAD.png)|![LINEAR](./images/2_OUT_QUAD.png)|![LINEAR](./images/3_IN_OUT_QUAD.png)
 |CUBIC|![LINEAR](./images/4_IN_CUBIC.png)|![LINEAR](./images/5_OUT_CUBIC.png)|![LINEAR](./images/6_IN_OUT_CUBIC.png)
 |QUART|![LINEAR](./images/7_IN_QUART.png)|![LINEAR](./images/8_OUT_QUART.png)|![LINEAR](./images/9_IN_OUT_QUART.png)
@@ -69,8 +69,8 @@ Gradleで依存ライブラリを管理している。
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.25'
 
-    // JUnit
-    testCompile 'junit:junit:4.12'
+    // Image
+    imageCompile 'org.jfree:jfreechart:1.0.19'
 }
 ```
 
