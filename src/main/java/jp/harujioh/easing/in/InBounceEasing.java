@@ -1,6 +1,6 @@
 package jp.harujioh.easing.in;
 
-import jp.harujioh.easing.BaseEasing;
+import jp.harujioh.easing.abstraction.StandardEasing;
 import jp.harujioh.easing.out.OutBounceEasing;
 
 /**
@@ -8,7 +8,7 @@ import jp.harujioh.easing.out.OutBounceEasing;
  * 
  * @author harujioh
  */
-public class InBounceEasing extends BaseEasing {
+public class InBounceEasing extends StandardEasing {
 
 	/**
 	 * for calculation
@@ -34,7 +34,7 @@ public class InBounceEasing extends BaseEasing {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public double easing(double time) {
-		return valueRange - this.easeOut.easing(duration - time) + startValue;
+	public double ease(double time) {
+		return valueRange - this.easeOut.ease(duration - time) + startValue;
 	}
 }

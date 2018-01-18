@@ -1,13 +1,13 @@
 package jp.harujioh.easing.out;
 
-import jp.harujioh.easing.BaseEasing;
+import jp.harujioh.easing.abstraction.StandardEasing;
 
 /**
  * circular easing out - decelerating to zero velocity
  * 
  * @author harujioh
  */
-public class OutCircEasing extends BaseEasing {
+public class OutCircEasing extends StandardEasing {
 
 	/**
 	 * Constructor
@@ -27,7 +27,7 @@ public class OutCircEasing extends BaseEasing {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public double easing(double time) {
+	public double ease(double time) {
 		return valueRange * Math.sqrt(1 - (time = time / duration - 1) * time) + startValue;
 	}
 }

@@ -1,11 +1,13 @@
 package jp.harujioh.easing;
 
+import jp.harujioh.easing.abstraction.StandardEasing;
+
 /**
  * simple linear - no easing, no acceleration
  * 
  * @author harujioh
  */
-public class LinearEasing extends BaseEasing {
+public class LinearEasing extends StandardEasing {
 
 	/**
 	 * Constructor
@@ -25,7 +27,7 @@ public class LinearEasing extends BaseEasing {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public double easing(double time) {
+	public double ease(double time) {
 		return valueRange * time / duration + startValue;
 	}
 }

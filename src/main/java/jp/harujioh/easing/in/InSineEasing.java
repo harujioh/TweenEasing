@@ -1,13 +1,13 @@
 package jp.harujioh.easing.in;
 
-import jp.harujioh.easing.BaseEasing;
+import jp.harujioh.easing.abstraction.StandardEasing;
 
 /**
  * sinusoidal easing in - accelerating from zero velocity
  * 
  * @author harujioh
  */
-public class InSineEasing extends BaseEasing {
+public class InSineEasing extends StandardEasing {
 
 	/**
 	 * Constructor
@@ -27,7 +27,7 @@ public class InSineEasing extends BaseEasing {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public double easing(double time) {
+	public double ease(double time) {
 		return -valueRange * Math.cos(time / duration * (Math.PI / 2)) + valueRange + startValue;
 	}
 }

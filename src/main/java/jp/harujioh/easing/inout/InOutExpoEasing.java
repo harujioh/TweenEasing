@@ -1,13 +1,13 @@
 package jp.harujioh.easing.inout;
 
-import jp.harujioh.easing.BaseEasing;
+import jp.harujioh.easing.abstraction.StandardEasing;
 
 /**
  * exponential easing in/out - accelerating until halfway, then decelerating
  * 
  * @author harujioh
  */
-public class InOutExpoEasing extends BaseEasing {
+public class InOutExpoEasing extends StandardEasing {
 
 	/**
 	 * Constructor
@@ -27,7 +27,7 @@ public class InOutExpoEasing extends BaseEasing {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public double easing(double time) {
+	public double ease(double time) {
 		if ((time /= duration / 2) < 1)
 			return valueRange / 2 * Math.pow(2, 10 * (time - 1)) + startValue;
 		return valueRange / 2 * (-Math.pow(2, -10 * --time) + 2) + startValue;

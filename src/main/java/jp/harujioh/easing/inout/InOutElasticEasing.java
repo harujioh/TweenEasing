@@ -1,13 +1,13 @@
 package jp.harujioh.easing.inout;
 
-import jp.harujioh.easing.BaseEasing;
+import jp.harujioh.easing.abstraction.StandardEasing;
 
 /**
  * elastically easing in/out - acceleration until halfway, then deceleration
  * 
  * @author harujioh
  */
-public class InOutElasticEasing extends BaseEasing {
+public class InOutElasticEasing extends StandardEasing {
 
 	/**
 	 * Constructor
@@ -27,7 +27,7 @@ public class InOutElasticEasing extends BaseEasing {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public double easing(double time) {
+	public double ease(double time) {
 		double s = 1.70158, p = duration * (.3 * 1.5), a = valueRange;
 		if (time == 0)
 			return startValue;

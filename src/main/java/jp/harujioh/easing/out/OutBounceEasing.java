@@ -1,13 +1,13 @@
 package jp.harujioh.easing.out;
 
-import jp.harujioh.easing.BaseEasing;
+import jp.harujioh.easing.abstraction.StandardEasing;
 
 /**
  * bounce easing out - decelerating to zero velocity
  * 
  * @author harujioh
  */
-public class OutBounceEasing extends BaseEasing {
+public class OutBounceEasing extends StandardEasing {
 
 	/**
 	 * Constructor
@@ -27,7 +27,7 @@ public class OutBounceEasing extends BaseEasing {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public double easing(double time) {
+	public double ease(double time) {
 		if ((time /= duration) < (1 / 2.75)) {
 			return valueRange * (7.5625 * time * time) + startValue;
 		} else if (time < (2 / 2.75)) {
