@@ -52,11 +52,6 @@ buildscript {
     }
 }
 
-javadoc {
-    options.charSet = 'UTF-8'
-    options.encoding = 'UTF-8'
-}
-
 task image (type: JavaExec) {
     main = 'jp.harujioh.easing.CreateSampleImage'
     classpath = sourceSets.image.runtimeClasspath
@@ -66,6 +61,11 @@ task image (type: JavaExec) {
         imageDir.mkdirs();
     }
     args imageDir, 150, 100
+}
+
+javadoc {
+    options.charSet = 'UTF-8'
+    options.encoding = 'UTF-8'
 }
 
 jar {
