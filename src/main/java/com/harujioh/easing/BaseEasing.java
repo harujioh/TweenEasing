@@ -33,8 +33,11 @@ public abstract class BaseEasing {
 	 * Constructor
 	 * 
 	 * @param startValue
+	 *            返す値の開始値
 	 * @param valueRange
+	 *            値の変化値
 	 * @param duration
+	 *            変化の総時間
 	 */
 	public BaseEasing(double startValue, double valueRange, double duration) {
 		this.startValue = startValue;
@@ -47,9 +50,13 @@ public abstract class BaseEasing {
 	 * Constructor
 	 * 
 	 * @param startValue
+	 *            返す値の開始値
 	 * @param valueRange
+	 *            値の変化値
 	 * @param duration
+	 *            変化の総時間
 	 * @param coefficient
+	 *            係数
 	 */
 	public BaseEasing(double startValue, double valueRange, double duration, double coefficient) {
 		this.startValue = startValue;
@@ -59,18 +66,20 @@ public abstract class BaseEasing {
 	}
 
 	/**
-	 * イージング値を取得
+	 * イージングした値を取得します。
 	 * 
 	 * @param time
-	 * @return
+	 *            時間
+	 * @return イージングした値
 	 */
 	public abstract double easing(double time);
 
 	/**
-	 * イージング値を取得
+	 * イージングした値を整数値で取得します。
 	 * 
 	 * @param time
-	 * @return
+	 *            時間
+	 * @return イージングした値
 	 */
 	public int easingInt(double time) {
 		return (int) this.easing(time);

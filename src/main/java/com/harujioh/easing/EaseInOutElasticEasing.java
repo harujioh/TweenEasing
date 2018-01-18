@@ -11,13 +11,19 @@ public class EaseInOutElasticEasing extends BaseEasing {
 	 * Constructor
 	 * 
 	 * @param startValue
+	 *            返す値の開始値
 	 * @param valueRange
+	 *            値の変化値
 	 * @param duration
+	 *            変化の総時間
 	 */
 	public EaseInOutElasticEasing(double startValue, double valueRange, double duration) {
 		super(startValue, valueRange, duration);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public double easing(double time) {
 		double s = 1.70158, p = duration * (.3 * 1.5), a = valueRange;
