@@ -65,7 +65,7 @@ task image (type: JavaExec) {
     if(!imageDir.isDirectory()){
         imageDir.mkdirs();
     }
-    args imageDir, 500, 100
+    args imageDir, 150, 100
 }
 
 jar {

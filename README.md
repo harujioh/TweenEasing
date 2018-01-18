@@ -4,6 +4,20 @@
 
 参考: jQuery Easing Plugin: <http://gsgd.co.uk/sandbox/jquery/easing/>
 
+|name|IN|OUT|IN-OUT|
+|---|---|---|---|
+|LINEAR|![LINEAR](./images/0_LINEAR.png)|||
+|QUAD|![LINEAR](./images/1_IN_QUAD.png)|![LINEAR](./images/2_OUT_QUAD.png)|![LINEAR](./images/3_IN_OUT_QUAD.png)
+|CUBIC|![LINEAR](./images/4_IN_CUBIC.png)|![LINEAR](./images/5_OUT_CUBIC.png)|![LINEAR](./images/6_IN_OUT_CUBIC.png)
+|QUART|![LINEAR](./images/7_IN_QUART.png)|![LINEAR](./images/8_OUT_QUART.png)|![LINEAR](./images/9_IN_OUT_QUART.png)
+|QUINT|![LINEAR](./images/10_IN_QUINT.png)|![LINEAR](./images/11_OUT_QUINT.png)|![LINEAR](./images/12_IN_OUT_QUINT.png)
+|SINE|![LINEAR](./images/13_IN_SINE.png)|![LINEAR](./images/14_OUT_SINE.png)|![LINEAR](./images/15_IN_OUT_SINE.png)
+|EXPO|![LINEAR](./images/16_IN_EXPO.png)|![LINEAR](./images/17_OUT_EXPO.png)|![LINEAR](./images/18_IN_OUT_EXPO.png)
+|CIRC|![LINEAR](./images/19_IN_CIRC.png)|![LINEAR](./images/20_OUT_CIRC.png)|![LINEAR](./images/21_IN_OUT_CIRC.png)
+|ELASTIC|![LINEAR](./images/22_IN_ELASTIC.png)|![LINEAR](./images/23_OUT_ELASTIC.png)|![LINEAR](./images/24_IN_OUT_ELASTIC.png)
+|BACK|![LINEAR](./images/25_IN_BACK.png)|![LINEAR](./images/26_OUT_BACK.png)|![LINEAR](./images/27_IN_OUT_BACK.png)
+|BOUNCE|![LINEAR](./images/28_IN_BOUNCE.png)|![LINEAR](./images/29_OUT_BOUNCE.png)|![LINEAR](./images/30_IN_OUT_BOUNCE.png)
+
 
 ## Javaバージョン
 
