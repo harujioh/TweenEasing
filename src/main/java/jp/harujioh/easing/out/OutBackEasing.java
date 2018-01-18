@@ -18,6 +18,20 @@ public class OutBackEasing extends CoefficientEasing {
 	 *            値の変化値
 	 * @param duration
 	 *            変化の総時間
+	 */
+	public OutBackEasing(double startValue, double valueRange, double duration) {
+		super(startValue, valueRange, duration, 1.70158);
+	}
+
+	/**
+	 * Constructor
+	 * 
+	 * @param startValue
+	 *            返す値の開始値
+	 * @param valueRange
+	 *            値の変化値
+	 * @param duration
+	 *            変化の総時間
 	 * @param coefficient
 	 *            係数
 	 */
